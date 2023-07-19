@@ -44,7 +44,7 @@ function handleFileUpload(videoNumber) {
 
         console.log(currentIndex);
 
-        fetch('https://fast-script2-f431ffc6d399.herokuapp.com/upload', {
+        fetch('https://fast-api-script-0d0703f4a5dc.herokuapp.com/upload', {
           method: 'POST',
           body: formData,
         })
@@ -168,7 +168,7 @@ function combine() {
     }
 
     // Upload the videos and combine them
-    fetch('https://fast-script2-f431ffc6d399.herokuapp.com/combine', {
+    fetch('https://fast-api-script-0d0703f4a5dc.herokuapp.com/combine', {
       method: 'POST',
       body: formData,
     })
