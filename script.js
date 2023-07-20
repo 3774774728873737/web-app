@@ -30,7 +30,7 @@ function handleFileUpload(videoNumber) {
 
     console.log("data23")
 
-    fetch('http://localhost:8000/upload', {
+    fetch('https://fast-api-script-0d0703f4a5dc.herokuapp.com/upload', {
       method: 'POST',
       body: formData,
     })
@@ -158,7 +158,7 @@ function combine() {
     }
 
     // Upload the videos and combine them
-    fetch('http://localhost:8000/combine', {
+    fetch('https://fast-api-script-0d0703f4a5dc.herokuapp.com/combine', {
       method: 'POST',
       body: formData,
     })
