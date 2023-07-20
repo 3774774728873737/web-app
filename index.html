@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <style>
       #loadingOverlay {
         position: absolute;
@@ -41,13 +41,16 @@
   </head>
   <body>
     <!-- Add the loading overlay -->
+    <div id="loadingOverlay2">
+      <div class="loader2"></div>
+    </div>
     <div id="loadingOverlay">
       <div class="loader"></div>
     </div>
     <div class="flex-container">
       <div class="flex-item">
-        <input type="file" multiple  id="fileInput1" style="display:none">
-        <button class="fancy-button" onclick="chooseFile(1)">Upload video</button>
+        <input type="file" id="fileInput1" multiple style="display:none">
+        <button class="fancy-button" onclick="uploadFile(1)">Upload video</button>
         <div class="video1">
           <video class="vid1" id="videoPlayer1" width="450" height="540" controls>
             <source id="videoSource1" src="" type="video/mp4">
@@ -57,8 +60,8 @@
         </div>
       </div>
       <div class="flex-item">
-        <button class="fancy-button2" id = "combineButton" onclick="combine()" >Export</button>
-        <input type="file" multiple  id="fileInput2" style="display:none">
+        <button class="fancy-button2" id="combineButton" onclick="combine()">Export</button>
+        <input type="file" id="fileInput2" multiple style="display:none">
         <button class="fancy-button" onclick="chooseFile(2)">Upload video</button>
         <div class="video2">
           <video id="videoPlayer2" width="450" height="540" controls>
@@ -69,7 +72,7 @@
         </div>
       </div>
       <div class="flex-item">
-        <input type="file" multiple id="fileInput3" style="display:none">
+        <input type="file" id="fileInput3" multiple style="display:none">
         <button class="fancy-button" onclick="chooseFile(3)">Upload video</button>
         <div class="video3">
           <video id="videoPlayer3" width="450" height="540" controls>
@@ -79,24 +82,16 @@
           <img class="thumbnail" id="videoThumbnail3" src="" alt="Video Thumbnail" style="display: none;">
         </div>
       </div>
-
-    </div>
- <div>
+      <div>
         <button class="fancy-button3" onclick="uploadAudio()">Upload audio</button>
         <input type="file" id="audioInput" style="display:none">
       </div>
     </div>
 
 
+    <script src="script.js"></script>
+    <script src="script.py"></script>
 
-    
-    <script src="script.js">
-    </script>
-    <script src="combine.js">
-    </script>
-  <script src="script.py"></script>
- 
-  <script>
-  </script>
+
   </body>
 </html>
